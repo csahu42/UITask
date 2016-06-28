@@ -19,6 +19,13 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
+    <activity
+        android:name=".ui.activity.ProfileOneActivity"
+        android:label="@string/profile"
+        android:parentActivityName=".ui.activity.FeedActivity"
+        android:theme="@style/ProfilePinkStyle"/>
+    <activity android:name=".ui.activity.ProfileMusicActivity">
+    </activity>
   </application>
 
 </manifest>

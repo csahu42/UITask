@@ -8,4 +8,8 @@
   <color name="colorOrange">#FF9800</color>
   <color name="colorTransparent">#00000000</color>
   <color name="colorGrayLight">#E0E0E0</color>
+  <color name="colorPinkLight">#E91E63</color>
+  <color name="colorPinkDark">#880E4F</color>
+  <color name="colorBlueGray">#607D8B</color>
+  <color name="colorGreenLight">#00E676</color>
 </resources>

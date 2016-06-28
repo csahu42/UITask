@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activity.ProfileOneActivity">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/colorWhite"
+      android:orientation="vertical">
+    <include
+        android:id="@+id/app_bar_layout"
+        layout="@layout/app_bar"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="196dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/prof_pic1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Alicia Keys"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:textSize="32sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/address1"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+        android:textColor="@color/black_overlay"/>
+    <TableLayout
+        android:id="@+id/attachmentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        tools:visibility="visible">
+
+      <TableRow
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+          <ImageView
+              android:layout_width="64dp"
+              android:layout_height="64dp"
+              android:background="@drawable/circuler_border"
+              android:contentDescription="@string/chat"
+              android:scaleType="centerInside"
+              android:src="@drawable/message_icon"/>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="8dp"
+              android:text="@string/chat"
+              android:textColor="@android:color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+          <ImageView
+              android:layout_width="64dp"
+              android:layout_height="64dp"
+              android:background="@drawable/circuler_border"
+              android:contentDescription="@string/gallery"
+              android:scaleType="centerInside"
+              android:src="@drawable/music_icon"/>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="8dp"
+              android:text="@string/gallery"
+              android:textColor="@android:color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onLocation"
+            android:orientation="vertical">
+
+          <ImageView
+              android:layout_width="64dp"
+              android:layout_height="64dp"
+              android:background="@drawable/circuler_border"
+              android:contentDescription="@string/location1"
+              android:scaleType="centerInside"
+              android:src="@drawable/location_icon"/>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="8dp"
+              android:text="@string/location1"
+              android:textColor="@android:color/black"/>
+
+        </LinearLayout>
+
+      </TableRow>
+
+      <TableRow
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="8dp"
+          android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+          <ImageView
+              android:layout_width="64dp"
+              android:layout_height="64dp"
+              android:background="@drawable/circuler_border"
+              android:scaleType="centerInside"
+              android:src="@drawable/friends_icon"/>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="8dp"
+              android:text="@string/friends"
+              android:textColor="@android:color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onContact"
+            android:orientation="vertical">
+
+          <ImageView
+              android:layout_width="64dp"
+              android:layout_height="64dp"
+              android:background="@drawable/circuler_border"
+              android:scaleType="centerInside"
+              android:src="@drawable/music_icon"/>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="8dp"
+              android:text="@string/music"
+              android:textColor="@android:color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onAudio"
+            android:orientation="vertical">
+
+          <ImageView
+              android:layout_width="64dp"
+              android:layout_height="64dp"
+              android:background="@drawable/circuler_border"
+              android:scaleType="centerInside"
+              android:src="@drawable/notification_icon"/>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="8dp"
+              android:text="@string/notification"
+              android:textColor="@android:color/black"/>
+
+        </LinearLayout>
+      </TableRow>
+    </TableLayout>
+  </LinearLayout>
+</layout>
+

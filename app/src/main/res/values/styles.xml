@@ -25,4 +25,10 @@
     <item name="colorPrimary">@android:color/holo_green_light</item>
     <item name="colorPrimaryDark">@android:color/holo_green_dark</item>
   </style>
+  <style name="ProfilePinkStyle" parent="AppTheme">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+    <item name="colorPrimary">@color/colorPinkLight</item>
+    <item name="colorPrimaryDark">@color/colorPinkDark</item>
+  </style>
 </resources>

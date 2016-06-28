@@ -6,8 +6,8 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.gmail.csahu42.uitask.R;
@@ -18,7 +18,7 @@ import com.gmail.csahu42.uitask.viewModels.FeedItem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FeedActivity extends AppCompatActivity
+public class FeedActivity extends BaseActivity
     implements NavigationView.OnNavigationItemSelectedListener {
 
   private ActivityFeedBinding activityFeedBinding;
@@ -27,10 +27,11 @@ public class FeedActivity extends AppCompatActivity
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     activityFeedBinding = DataBindingUtil.setContentView(this, R.layout.activity_feed);
-    setSupportActionBar(activityFeedBinding.appBarLayout.toolbar);
-    ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, activityFeedBinding.drawerLayout,
-        activityFeedBinding.appBarLayout.toolbar, R.string.navigation_drawer_open,
-        R.string.navigation_drawer_close);
+    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+    setSupportActionBar(toolbar);
+    ActionBarDrawerToggle toggle =
+        new ActionBarDrawerToggle(this, activityFeedBinding.drawerLayout, toolbar,
+            R.string.navigation_drawer_open, R.string.navigation_drawer_close);
     activityFeedBinding.drawerLayout.setDrawerListener(toggle);
     toggle.syncState();
     activityFeedBinding.navView.setNavigationItemSelectedListener(this);
@@ -90,9 +91,9 @@ public class FeedActivity extends AppCompatActivity
     int id = item.getItemId();
 
     if (id == R.id.nav_message) {
-      // Handle the camera action
-    } else if (id == R.id.nav_photo) {
 
+    } else if (id == R.id.nav_photo) {
+      startActivity(ProfileOneActivity.getIntentFor(this));
     } else if (id == R.id.nav_friend) {
 
     } else if (id == R.id.nav_music) {
@@ -100,7 +101,7 @@ public class FeedActivity extends AppCompatActivity
     } else if (id == R.id.nav_notification) {
 
     } else if (id == R.id.nav_settings) {
-
+      startActivity(ProfileOneActivity.getIntentFor(this));
     }
 
     activityFeedBinding.drawerLayout.closeDrawer(GravityCompat.START);
