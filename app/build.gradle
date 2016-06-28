@@ -3,6 +3,9 @@ apply plugin: 'com.android.application'
 android {
   compileSdkVersion 23
   buildToolsVersion "24.0.0"
+  dataBinding {
+    enabled = true
+  }
   defaultConfig {
     applicationId "com.gmail.csahu42.uitask"
     minSdkVersion 17

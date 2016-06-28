@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="CircleImageView">
+    <attr format="dimension" name="CircleImageView_border_width"/>
+    <attr format="color" name="CircleImageView_border_color"/>
+    <attr format="boolean" name="circular_border_overlay"/>
+    <attr format="color" name="circularImageView_fill_color"/>
+  </declare-styleable>
+</resources>

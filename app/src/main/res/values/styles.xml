@@ -6,7 +6,7 @@
     <item name="android:windowDisablePreview">true</item>
     <item name="android:actionModeBackground">@color/colorPrimary</item>
     <item name="windowActionModeOverlay">true</item>
-    <item name="colorPrimary">@color/black_overlay</item>
+    <item name="colorPrimary">@color/colorAccent</item>
     <item name="colorPrimaryDark">@color/colorWhite</item>
     <item name="colorAccent">@color/colorAccent</item>
     <item name="windowActionBar">false</item>
@@ -21,5 +21,8 @@
   </style>
   <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
   <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
-
+  <style name="FeedStyle" parent="AppTheme.NoActionBar">
+    <item name="colorPrimary">@android:color/holo_green_light</item>
+    <item name="colorPrimaryDark">@android:color/holo_green_dark</item>
+  </style>
 </resources>

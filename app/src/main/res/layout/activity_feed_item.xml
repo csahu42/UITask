@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+  <data>
+    <variable name="item" type="com.gmail.csahu42.uitask.viewModels.FeedItem"/>
+  </data>
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="16dp"
+      android:layout_marginStart="16dp"
+      android:paddingBottom="16dp"
+      android:paddingTop="16dp">
+    <com.gmail.csahu42.uitask.CircleImageView
+        android:id="@+id/avatar"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:padding="4dp"
+        app:resId="@{item.avatarResId}"
+        tools:src="@drawable/myphoto"/>
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/avatar"
+        android:maxLines="1"
+        android:paddingTop="8dp"
+        android:text="@{item.name}"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@android:color/primary_text_light"
+        tools:text="ChhattLal Sahu"/>
+    <TextView
+        android:id="@+id/viewCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/avatar"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/view_icon"
+        android:gravity="center"
+        android:text='@{"" + item.viewCount}'
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/secondary_text_dark"
+        tools:text="249"/>
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/viewCount"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/name"
+        android:layout_marginStart="8dp"
+        android:paddingTop="8dp"
+        android:text="@{item.time}"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/secondary_text_dark"
+        tools:text="09:27 AM"/>
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/avatar"
+        android:layout_marginTop="16dp"
+        android:padding="4dp"
+        android:text="@{item.message}"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/secondary_text_dark"
+        tools:text="Interestingly, I have one in early january, I know the number, but I do not know the day of the weak?"/>
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="196dp"
+        android:layout_below="@id/message"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/feed"
+        android:maxHeight="256dp"
+        android:scaleType="fitXY"
+        app:resId="@{item.feedImageResId}"
+        tools:src="@drawable/feed_pic1"
+        tools:visibility="visible"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/image"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:divider="@color/colorTransparent"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:weightSum="3">
+      <Button
+          android:id="@+id/comments"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_marginEnd="8dp"
+          android:layout_weight="1"
+          android:background="@color/colorGrayLight"
+          android:gravity="center"
+          android:text='@{"comments (" + item.commentCount +")"}'
+          tools:text="comments (7)"
+          style="@style/Widget.AppCompat.Button.Borderless"/>
+      <Button
+          android:id="@+id/share"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_marginEnd="8dp"
+          android:layout_weight="1"
+          android:background="@color/colorGrayLight"
+          android:gravity="center"
+          android:text="@string/share"
+          style="@style/Widget.AppCompat.Button.Borderless"/>
+      <Button
+          android:id="@+id/likes"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:background="@color/colorGrayLight"
+          android:drawableEnd="@drawable/like_icon"
+          android:drawablePadding="4dp"
+          android:gravity="end|center_vertical"
+          android:paddingEnd="8dp"
+          android:paddingStart="8dp"
+          android:text='@{item.likeCount + " likes"}'
+          tools:text="12 likes"
+          style="@style/Widget.AppCompat.Button.Borderless"/>
+    </LinearLayout>
+
+  </RelativeLayout>
+
+</layout>
