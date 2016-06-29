@@ -14,7 +14,7 @@ import static android.R.id.home;
 
 public class ProfileOneActivity extends BaseActivity {
 
-   static Intent getIntentFor(Context context) {
+  static Intent getIntentFor(Context context) {
     return new Intent(context, ProfileOneActivity.class);
   }
 
@@ -32,10 +32,16 @@ public class ProfileOneActivity extends BaseActivity {
     this.finish();
   }
 
+  @Override public boolean onPrepareOptionsMenu(Menu menu) {
+    menu.findItem(R.id.action_search).setVisible(false).setEnabled(false);
+    return true;
+  }
+
   @Override public boolean onCreateOptionsMenu(Menu menu) {
     getMenuInflater().inflate(R.menu.profile, menu);
     return true;
   }
+
   @Override public boolean onOptionsItemSelected(MenuItem item) {
     // Handle action bar item clicks here. The action bar will
     // automatically handle clicks on the Home/Up button, so long
@@ -45,7 +51,7 @@ public class ProfileOneActivity extends BaseActivity {
     //noinspection SimplifiableIfStatement
     if (id == R.id.action_setting) {
       return true;
-    }else if(id == home){
+    } else if (id == home) {
       onBackPressed();
     }
 

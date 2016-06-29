@@ -22,13 +22,28 @@
   <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
   <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
   <style name="FeedStyle" parent="AppTheme.NoActionBar">
-    <item name="colorPrimary">@android:color/holo_green_light</item>
-    <item name="colorPrimaryDark">@android:color/holo_green_dark</item>
+    <item name="colorPrimary">@color/colorPrimaryGreen</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryGreenDark</item>
   </style>
   <style name="ProfilePinkStyle" parent="AppTheme">
     <item name="windowActionBar">false</item>
     <item name="windowNoTitle">true</item>
     <item name="colorPrimary">@color/colorPinkLight</item>
     <item name="colorPrimaryDark">@color/colorPinkDark</item>
+  </style>
+  <style name="ProfileMusicStyle" parent="AppTheme">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+    <item name="colorPrimary">@android:color/holo_blue_light</item>
+    <item name="colorPrimaryDark">@android:color/holo_blue_dark</item>
+    <item name="colorControlNormal">@color/colorGrayMedium</item>
+    <item name="colorAccent">@color/colorGreenLight</item>
+  </style>
+
+  <style name="CategoryStyle" parent="AppTheme">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+    <item name="colorPrimary">@color/colorRed</item>
+    <item name="colorPrimaryDark">@color/colorRedDark</item>
   </style>
 </resources>

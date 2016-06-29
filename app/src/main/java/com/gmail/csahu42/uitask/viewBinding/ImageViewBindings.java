@@ -1,6 +1,7 @@
 package com.gmail.csahu42.uitask.viewBinding;
 
 import android.databinding.BindingAdapter;
+import android.support.annotation.DrawableRes;
 import android.widget.ImageView;
 import com.gmail.csahu42.uitask.CircleImageView;
 
@@ -11,11 +12,11 @@ import com.gmail.csahu42.uitask.CircleImageView;
   }
 
   @BindingAdapter({ "resId" })
-  public static void setImage(CircleImageView imageView, int drawableResId) {
+  public static void setImage(CircleImageView imageView, @DrawableRes int drawableResId) {
     imageView.setImageResource(drawableResId);
   }
 
-  @BindingAdapter({ "resId" }) public static void setImage(ImageView imageView, int drawableResId) {
+  @BindingAdapter({ "resId" }) public static void setImage(ImageView imageView,@DrawableRes int drawableResId) {
     imageView.setImageResource(drawableResId);
   }
 }

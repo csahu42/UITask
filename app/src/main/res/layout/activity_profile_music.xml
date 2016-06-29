@@ -9,8 +9,8 @@
       android:layout_height="match_parent"
       android:background="@color/colorWhite">
     <include
-        layout="@layout/app_bar"
-        android:id="@+id/app_bar_layout"/>
+        android:id="@+id/app_bar_layout"
+        layout="@layout/app_bar"/>
     <com.gmail.csahu42.uitask.CircleImageView
         android:id="@+id/avatar"
         android:layout_width="80dp"
@@ -42,8 +42,8 @@
         android:textColor="@color/black_overlay"/>
     <Button
         android:id="@+id/btnFollow"
-        android:layout_width="96dp"
-        android:layout_height="42dp"
+        android:layout_width="100dp"
+        android:layout_height="36dp"
         android:layout_below="@id/location"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -55,15 +55,15 @@
         style="@style/TextAppearance.AppCompat.Button"/>
     <Button
         android:id="@+id/btnWrite"
-        android:layout_width="wrap_content"
-        android:layout_height="42dp"
+        android:layout_width="100dp"
+        android:layout_height="36dp"
         android:layout_below="@id/location"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_toEndOf="@id/btnFollow"
         android:background="@android:color/darker_gray"
         android:padding="8dp"
-        android:text="Write"
+        android:text="@string/write"
         android:textColor="@color/button_text_color_states"
         style="@style/TextAppearance.AppCompat.Button"/>
     <android.support.design.widget.TabLayout
@@ -75,15 +75,13 @@
         android:background="@android:color/darker_gray"
         app:tabGravity="fill"
         app:tabIndicatorColor="@color/colorTransparent"
-        app:tabMode="scrollable"/>
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/musicList"
+        app:tabMode="fixed"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/tabs"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:layoutManager="@string/linearLayoutManager"
-        tools:listitem="@layout/activity_profile_music_item"/>
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
   </RelativeLayout>
 </layout>

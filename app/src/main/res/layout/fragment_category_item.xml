@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.gmail.csahu42.uitask.ui.fragment.CategoryFragment">
+  <data>
+    <variable name="item" type="com.gmail.csahu42.uitask.viewModels.CategoryItem"/>
+  </data>
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/colorGrayLight"
+      android:paddingBottom="16dp"
+      android:paddingTop="16dp">
+    <TextView
+        android:id="@+id/categoryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+        android:text="@{item.categoryTitle}"
+        tools:text="LandScape"/>
+    <TextView
+        android:id="@+id/photoCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/categoryTitle"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/secondary_text_light"
+        android:text='@{item.photoCount + " Photo" }'
+        tools:text="2348 Photo"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/photoList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/photoCount"
+        android:layout_marginTop="16dp"
+        tools:listitem="@layout/fragment_category_item_sub_item"/>
+  </RelativeLayout>
+
+</layout>

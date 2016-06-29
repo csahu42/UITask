@@ -10,9 +10,7 @@
       android:supportsRtl="true"
       android:theme="@style/AppTheme">
     <activity
-        android:name=".ui.activity.FeedActivity"
-        android:label="@string/feed"
-        android:theme="@style/FeedStyle">
+        android:name=".ui.activity.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
 
@@ -22,9 +20,17 @@
     <activity
         android:name=".ui.activity.ProfileOneActivity"
         android:label="@string/profile"
-        android:parentActivityName=".ui.activity.FeedActivity"
+        android:parentActivityName=".ui.activity.MainActivity"
         android:theme="@style/ProfilePinkStyle"/>
-    <activity android:name=".ui.activity.ProfileMusicActivity">
+    <activity
+        android:name=".ui.activity.ProfileMusicActivity"
+        android:label="@string/profile"
+        android:parentActivityName=".ui.activity.MainActivity"
+        android:theme="@style/ProfileMusicStyle"/>
+    <activity android:name=".ui.activity.CategoryActivity"
+        android:label="@string/categories"
+        android:parentActivityName=".ui.activity.MainActivity"
+        android:theme="@style/CategoryStyle">
     </activity>
   </application>
 
