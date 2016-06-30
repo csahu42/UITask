@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+  <data>
+    <variable name="item" type="com.gmail.csahu42.uitask.viewModels.StoryItem"/>
+  </data>
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/colorWhite"
+      android:paddingBottom="16dp"
+      android:paddingEnd="16dp"
+      android:paddingStart="16dp"
+      android:paddingTop="16dp">
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:contentDescription="@string/avatar"
+        android:scaleType="fitXY"
+        app:resId="@{item.avatarResId}"
+        tools:src="@drawable/myphoto"/>
+    <TextView
+        android:id="@+id/story_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/avatar"
+        android:maxLines="1"
+        android:text="@{item.title}"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" android:textColor="#616161"
+        tools:text="My trip to Italy"/>
+    <TextView
+        android:id="@+id/body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/story_title"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/avatar"
+        android:maxLines="2"
+        android:text="@{item.content}"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#9E9E9E"
+        tools:text="I just returned from italy, visiting Rome, Venice over the coarse of two weeks. I went with my friends"/>
+  </RelativeLayout>
+</layout>

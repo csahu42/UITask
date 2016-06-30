@@ -46,4 +46,11 @@
     <item name="colorPrimary">@color/colorRed</item>
     <item name="colorPrimaryDark">@color/colorRedDark</item>
   </style>
+
+  <style name="MyProfileStyle" parent="AppTheme">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+    <item name="colorPrimary">@color/colorPrimaryIndigo</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryIndigoDark</item>
+  </style>
 </resources>

@@ -28,4 +28,10 @@
   <string name="hello_blank_fragment">Hello blank fragment</string>
   <string name="popular">Popular</string>
   <string name="categories">Categories</string>
+  <string name="name1">Johnny Depp</string>
+  <string name="location3">Prague, Czeck Republic</string>
+  <string name="stories">Stories</string>
+  <string name="followers">Followers</string>
+  <string name="following">Following</string>
+  <string name="avatar">avatar</string>
 </resources>

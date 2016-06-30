@@ -9,7 +9,7 @@ import android.support.v7.widget.util.SortedListAdapterCallback;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import com.gmail.csahu42.uitask.R;
-import com.gmail.csahu42.uitask.databinding.ActivityFeedItemBinding;
+import com.gmail.csahu42.uitask.databinding.ContentFeedItemBinding;
 import com.gmail.csahu42.uitask.viewModels.FeedItem;
 import java.util.List;
 
@@ -43,7 +43,7 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
   @Override public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
     if (inflater == null) inflater = LayoutInflater.from(parent.getContext());
     return new ViewHolder(
-        (ActivityFeedItemBinding) DataBindingUtil.inflate(inflater, R.layout.activity_feed_item,
+        (ContentFeedItemBinding) DataBindingUtil.inflate(inflater, R.layout.content_feed_item,
             parent, false));
   }
 
@@ -76,14 +76,14 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
 
   class ViewHolder extends RecyclerView.ViewHolder {
 
-    private ActivityFeedItemBinding binding;
+    private ContentFeedItemBinding binding;
 
-    ViewHolder(ActivityFeedItemBinding binding) {
+    ViewHolder(ContentFeedItemBinding binding) {
       super(binding.getRoot());
       this.binding = binding;
     }
 
-    ActivityFeedItemBinding getBinding() {
+    ContentFeedItemBinding getBinding() {
       return binding;
     }
   }

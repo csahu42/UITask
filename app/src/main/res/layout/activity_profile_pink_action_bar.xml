@@ -8,8 +8,8 @@
       android:background="@color/colorWhite"
       android:orientation="vertical">
     <include
-        android:id="@+id/app_bar_layout"
-        layout="@layout/app_bar"/>
+        layout="@layout/app_bar"
+        android:id="@+id/app_bar_layout"/>
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="196dp"
@@ -99,7 +99,6 @@
             android:layout_weight="1"
             android:clickable="true"
             android:gravity="center"
-            android:onClick="onLocation"
             android:orientation="vertical">
 
           <ImageView
@@ -140,6 +139,7 @@
               android:layout_height="64dp"
               android:background="@drawable/circuler_border"
               android:scaleType="centerInside"
+              android:contentDescription="@string/friends"
               android:src="@drawable/friends_icon"/>
 
           <TextView
@@ -157,13 +157,13 @@
             android:layout_weight="1"
             android:clickable="true"
             android:gravity="center"
-            android:onClick="onContact"
             android:orientation="vertical">
 
           <ImageView
               android:layout_width="64dp"
               android:layout_height="64dp"
               android:background="@drawable/circuler_border"
+              android:contentDescription="@string/music"
               android:scaleType="centerInside"
               android:src="@drawable/music_icon"/>
 
@@ -182,13 +182,13 @@
             android:layout_weight="1"
             android:clickable="true"
             android:gravity="center"
-            android:onClick="onAudio"
             android:orientation="vertical">
 
           <ImageView
               android:layout_width="64dp"
               android:layout_height="64dp"
               android:background="@drawable/circuler_border"
+              android:contentDescription="@string/notification"
               android:scaleType="centerInside"
               android:src="@drawable/notification_icon"/>
 

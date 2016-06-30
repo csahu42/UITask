@@ -10,7 +10,6 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:background="@color/colorGrayLight"
-      android:paddingBottom="16dp"
       android:paddingTop="16dp">
     <TextView
         android:id="@+id/categoryTitle"
@@ -25,7 +24,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/categoryTitle"
-        android:layout_marginTop="8dp"
         android:layout_marginStart="16dp"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
         android:textColor="@android:color/secondary_text_light"
@@ -34,9 +32,9 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/photoList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/photoCount"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         tools:listitem="@layout/fragment_category_item_sub_item"/>
   </RelativeLayout>
 
