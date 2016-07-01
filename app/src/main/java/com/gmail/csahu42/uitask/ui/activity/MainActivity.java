@@ -12,10 +12,12 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import com.gmail.csahu42.uitask.R;
 import com.gmail.csahu42.uitask.databinding.ActivityMainBinding;
 import com.gmail.csahu42.uitask.ui.fragment.CategoryFragment;
 import com.gmail.csahu42.uitask.ui.fragment.FeedFragment;
+import com.gmail.csahu42.uitask.ui.fragment.ProfileFragment;
 
 public class MainActivity extends BaseActivity
     implements NavigationView.OnNavigationItemSelectedListener {
@@ -62,6 +64,14 @@ public class MainActivity extends BaseActivity
     return true;
   }
 
+  public void onClickProfileNav(View view) {
+    //noinspection ConstantConditions
+    getSupportActionBar().setBackgroundDrawable(
+        ContextCompat.getDrawable(this, R.color.colorTealShadePrimary));
+    startFrangmentTransaction(new ProfileFragment());
+    mainBinding.drawerLayout.closeDrawer(GravityCompat.START);
+  }
+
   @Override public boolean onOptionsItemSelected(MenuItem item) {
     // Handle action bar item clicks here. The action bar will
     // automatically handle clicks on the Home/Up button, so long
@@ -105,7 +115,7 @@ public class MainActivity extends BaseActivity
     } else if (id == R.id.nav_music) {
       startActivity(ProfileMusicActivity.getIntentFor(this));
     } else if (id == R.id.nav_notification) {
-      startActivity(ProfileTwoActivity.getIntentFor(this));
+      startActivity(NotificationActivity.getIntentFor(this));
     } else if (id == R.id.nav_settings) {
       startActivity(ProfileOneActivity.getIntentFor(this));
     }

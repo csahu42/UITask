@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.gmail.csahu42.uitask.ui.activity.NotificationActivity">
+  <RelativeLayout
+      android:id="@+id/activity_notification"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/colorWhite">
+      <include
+          layout="@layout/app_bar"
+          android:id="@+id/app_bar_layout"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/notificationList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?actionBarSize"
+        android:paddingEnd="8dp"
+        android:paddingStart="16dp"
+        app:layoutManager="@string/linearLayoutManager"
+        tools:listitem="@layout/activity_notification_item"/>
+  </RelativeLayout>
+</layout>

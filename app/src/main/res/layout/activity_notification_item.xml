@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+  <data>
+    <import type="android.view.View"/>
+    <variable name="item" type="com.gmail.csahu42.uitask.viewModels.NotificationItem"/>
+  </data>
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/colorWhite"
+      android:padding="16dp">
+    <com.gmail.csahu42.uitask.CircleImageView
+        android:id="@+id/avatar"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:contentDescription="@string/avatar"
+        app:resId="@{item.avatarResId}"
+        tools:src="@drawable/geri_pic"/>
+    <TextView
+        android:id="@+id/notification_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/avatar"
+        android:padding="8dp"
+        android:text="@{item.title}"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+        tools:text="Mary White liked Golden Gate"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/followList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notification_title"
+        android:layout_toEndOf="@id/avatar"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:visibility="@{item.type == 3 ? View.VISIBLE: View.GONE}"
+        tools:listitem="@layout/activity_notifications_follow_item"
+        tools:visibility="visible"/>
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/followList"
+        android:layout_toEndOf="@id/avatar"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/time_icon"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="@{item.time}"
+        android:textSize="12sp"
+        android:textColor="@android:color/secondary_text_dark"
+        tools:text="Just now"/>
+    <RelativeLayout
+        android:id="@+id/image_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time"
+        android:layout_toEndOf="@id/avatar"
+        android:paddingTop="16dp"
+        android:visibility="@{item.type == 4 ? View.VISIBLE: View.GONE}">
+      <ImageView
+          android:id="@+id/image"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:contentDescription="@android:string/unknownName"
+          app:resId="@{item.addedImageResId}"
+          tools:src="@drawable/italy"/>
+
+      <TextView
+          android:id="@+id/like_count"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="true"
+          android:layout_below="@id/image"
+          android:layout_marginTop="8dp"
+          android:drawablePadding="8dp"
+          android:drawableStart="@drawable/like_icon"
+          android:gravity="center"
+          android:text='@{"" + item.likeCount}'
+          tools:text="96"/>
+    </RelativeLayout>
+
+  </RelativeLayout>
+</layout>

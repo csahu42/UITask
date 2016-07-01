@@ -50,6 +50,7 @@ public class ProfileOneActivity extends BaseActivity {
 
     //noinspection SimplifiableIfStatement
     if (id == R.id.action_setting) {
+
       return true;
     } else if (id == home) {
       onBackPressed();

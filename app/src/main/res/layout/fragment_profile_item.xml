@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+  <data>
+    <variable name="item" type="com.gmail.csahu42.uitask.viewModels.ProfileItem"/>
+  </data>
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingTop="16dp">
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/location"
+        android:scaleType="matrix"
+        app:resId="@{item.imageResId}"
+        tools:src="@drawable/feed_image1"/>
+    <TextView
+        android:id="@+id/checked_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:paddingTop="8dp"
+        android:text="@{item.location}"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="@color/colorWhite"
+        tools:text="Village"/>
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checked_location"
+        android:layout_marginStart="16dp"
+        android:alpha="0.7"
+        android:text="@{item.time}"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorWhite"
+        tools:text="46 minutes ago"/>
+    <TextView
+        android:id="@+id/like_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/image"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:drawablePadding="4dp"
+        android:drawableStart="@drawable/like_icon"
+        android:gravity="center"
+        android:text='@{"" + item.likeCount}'
+        android:textColor="@color/colorWhite"
+        tools:ignore="RelativeOverlap" tools:text="96"/>
+  </RelativeLayout>
+</layout>

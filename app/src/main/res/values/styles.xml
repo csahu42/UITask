@@ -53,4 +53,18 @@
     <item name="colorPrimary">@color/colorPrimaryIndigo</item>
     <item name="colorPrimaryDark">@color/colorPrimaryIndigoDark</item>
   </style>
+
+  <style name="NotificationStyle" parent="AppTheme">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryIndigoDark</item>
+  </style>
+
+  <style name="ProfileTealStyle" parent="AppTheme">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+    <item name="colorPrimary">@color/colorTealShadePrimary</item>
+    <item name="colorPrimaryDark">@color/colorTealShadePrimaryDark</item>
+  </style>
 </resources>

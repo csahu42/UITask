@@ -8,9 +8,8 @@
       android:icon="@mipmap/ic_launcher"
       android:label="@string/app_name"
       android:supportsRtl="true"
-      android:theme="@style/AppTheme">
-    <activity
-        android:name=".ui.activity.MainActivity">
+      android:theme="@style/FeedStyle">
+    <activity android:name=".ui.activity.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
 
@@ -27,9 +26,15 @@
         android:label="@string/profile"
         android:parentActivityName=".ui.activity.MainActivity"
         android:theme="@style/ProfileMusicStyle"/>
-    <activity android:name=".ui.activity.ProfileTwoActivity"
+    <activity
+        android:name=".ui.activity.ProfileTwoActivity"
         android:parentActivityName=".ui.activity.MainActivity"
         android:theme="@style/MyProfileStyle">
+    </activity>
+    <activity android:name=".ui.activity.NotificationActivity"
+        android:parentActivityName=".ui.activity.MainActivity"
+        android:label="@string/notification"
+        android:theme="@style/NotificationStyle">
     </activity>
   </application>
 

@@ -17,6 +17,7 @@
       android:background="@color/colorTransparent"
       android:contentDescription="@android:string/unknownName"
       android:padding="8dp"
+      android:onClick="onClickProfileNav"
       android:src="@drawable/edit_pen_icon"/>
 
   <com.gmail.csahu42.uitask.CircleImageView
