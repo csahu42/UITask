@@ -73,8 +73,6 @@
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:background="@color/colorWhite"
-        app:paddingEnd="-1dp"
-        app:paddingStart="-1dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:tabGravity="fill"
         app:tabIndicatorColor="@color/colorTransparent"

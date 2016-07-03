@@ -67,4 +67,9 @@
     <item name="colorPrimary">@color/colorTealShadePrimary</item>
     <item name="colorPrimaryDark">@color/colorTealShadePrimaryDark</item>
   </style>
+
+  <style name="TabStyle" parent="@android:style/Widget.Holo.Light.ActionBar.TabView">
+    <item name="android:paddingStart">0dip</item>
+    <item name="android:paddingEnd">0dip</item>
+  </style>
 </resources>

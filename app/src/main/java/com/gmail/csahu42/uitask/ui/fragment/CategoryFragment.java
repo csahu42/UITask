@@ -13,7 +13,6 @@ import android.view.ViewGroup;
 import com.gmail.csahu42.uitask.R;
 import com.gmail.csahu42.uitask.databinding.FragmentCategoryBinding;
 import com.gmail.csahu42.uitask.ui.adapter.CategoryAdapter;
-import com.gmail.csahu42.uitask.utils.CustomLinearLayoutManager;
 import com.gmail.csahu42.uitask.viewModels.CategoryItem;
 import com.gmail.csahu42.uitask.viewModels.PhotoItem;
 import java.util.ArrayList;
@@ -34,9 +33,11 @@ public class CategoryFragment extends Fragment {
   @Override public void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-      getActivity().getWindow().setStatusBarColor(ContextCompat.getColor(getContext(), R.color.colorRedDark));
+      getActivity().getWindow()
+          .setStatusBarColor(ContextCompat.getColor(getContext(), R.color.colorRedDark));
+    } else {
+      getActivity().setTheme(R.style.CategoryStyle);
     }
-    else getActivity().setTheme(R.style.CategoryStyle);
   }
 
   @Override public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -49,7 +50,7 @@ public class CategoryFragment extends Fragment {
   @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
     adapter = new CategoryAdapter();
-    final CustomLinearLayoutManager layoutManager = new CustomLinearLayoutManager(getContext());
+    final LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
     layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
     categoryBinding.list.setLayoutManager(layoutManager);
     categoryBinding.list.setHasFixedSize(true);
