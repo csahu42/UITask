@@ -34,4 +34,6 @@
   <string name="followers">Followers</string>
   <string name="following">Following</string>
   <string name="avatar">avatar</string>
+  <string name="message">Messages</string>
+  <string name="photo">Photo</string>
 </resources>

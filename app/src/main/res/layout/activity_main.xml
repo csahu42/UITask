@@ -19,12 +19,17 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        android:background="@color/colorWhite"
-        app:itemIconTint="@android:color/darker_gray"
-        app:itemTextColor="@android:color/secondary_text_dark"
-        app:headerLayout="@layout/nav_header_feed"
-        app:menu="@menu/activity_feed_drawer"
-        app:theme="@style/ThemeOverlay.AppCompat.Light"/>
+        app:theme="@style/ThemeOverlay.AppCompat.Light">
+      <ListView
+          android:id="@+id/itemList"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@color/colorWhite"
+          android:choiceMode="singleChoice"
+          android:footerDividersEnabled="true"
+          android:divider="@android:color/transparent"
+          android:dividerHeight="0dp"/>
+    </android.support.design.widget.NavigationView>
   </android.support.v4.widget.DrawerLayout>
 
 </layout>
